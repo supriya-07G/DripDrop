@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DripDrop - Budget Balancer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>DripDrop <span class="water-drop">💧</span></h1>
+        
+        <!-- Budget Setup Section -->
+        <div class="section budget-section" id="budgetSection">
+            <h3>Set Your Monthly Flow</h3>
+            <input type="number" id="budgetInput" placeholder="e.g., 300" min="1" class="input-field animate-input">
+            <button id="setBudgetBtn" class="btn animate-btn">Start Flow</button>
+        </div>
+
+        <!-- Spending Log Section -->
+        <div class="section spend-section" id="spendSection">
+            <h3>Drop Today’s Spend</h3>
+            <input type="number" id="spendInput" placeholder="e.g., 7" min="1" class="input-field animate-input">
+            <button id="logSpendBtn" class="btn animate-btn">Add Drop</button>
+        </div>
+
+        <!-- Display Section -->
+        <div class="section display-section" id="display">
+            <p><i class="icon">💰</i> Monthly Budget: $<span id="budget">0</span></p>
+            <p><i class="icon">💧</i> Today’s Drip: $<span id="drip">0</span></p>
+            <p><i class="icon">🛒</i> Today’s Spent: $<span id="spent">0</span></p>
+            <div class="jar-container animate-jar">
+                <p><i class="icon">🏺</i> Drop Jar: $<span id="jar">0</span></p>
+                <div class="progress-bar">
+                    <div class="progress-fill animate-fill" id="jarProgress"></div>
+                </div>
+            </div>
+            <p><i class="icon">⭐</i> Drip Dots: <span id="dots">0</span></p>
+            <p id="reward" class="reward-text animate-reward"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
